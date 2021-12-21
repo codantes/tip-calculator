@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./styling/syle.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+ 
+</head>
+<body>
+  <header>
+    <img src="./images/logo.svg" alt="">
+  </header>
+<section class="main-component">
+  <article class="calculator">
+  <form action="" method="get">
+      <label for="bill">Bill</label><br>
+      
+      <input type="text" name="bill" id="bill"  >
+      
+      <br>
+      <div class="tip-percent">
+        <label for="tip-percent">Select Tip %</label>
+        <button type="button" name="tip-percent" id="percent-buttons 5%" value="5" onclick="tipPercentage(.05)">5%</button>
+
+        <button type="button" name="tip-percent" id="percent-button 10%" value="10" onclick="tipPercentage(.1)">10%</button>
+
+        <button type="button" name="tip-percent" id="percent-button 15%" value="15" onclick="tipPercentage(.15)">15%</button>
+
+        <button type="button" name="tip-percent" id="percent-button 25%" value="25" onclick="tipPercentage(.25)" >25%</button>
+
+        <button type="button" name="tip-percent" id="percent-button 50%" value="50" onclick="tipPercentage(.5)" >50%</button>
+
+        <input type="text" placeholder="custom" name="tip-percent" id="">
+      </div>
+        <br>
+        <label for="no-of-people">Number of People</label>
+        <input type="text" name="number of people" id="no-of-people" >
+    
+  </form>
+  </article>
+
+  <article class="display">
+    <div class="tip-amount">
+      Tip Amount
+      <p>/ person</p>
+    </div>
+
+    <div class="total-tip-display" id="total-tip-display">$0.00</div>
+
+    <div class="each-person">
+      Total
+      <p>/ person</p>
+    </div>
+
+    <div class="each-person-display" id="each-person-display">$0.00</div>
+    <button type="button" onclick="reset()"> Reset </button>
+  </article>
+</section>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Pranav Kumar</a>.
+  </div>
+
+  <script src="./javascript/scirpt.js"></script>
+</body>
+</html>

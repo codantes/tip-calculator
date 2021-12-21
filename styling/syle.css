@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+    --my-font:'Space Mono', monospace;
+    --button-color: hsl(183, 100%, 15%);
+    --input-background-color: hsl(185, 41%, 84%);
+    --button-color-hover:hsl(184, 14%, 56%);
+    --color: hsl(186, 14%, 43%);
+}
+
+header{
+    text-align: center;
+    margin: 3rem;
+}
+
+body{
+    background: hsl(189, 41%, 97%);
+    font-family: var(--my-font);
+}
+
+.main-component{
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.tip-percent{
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem ;
+}
+
+.tip-percent label{
+    grid-column: 1/ span 2;
+    margin: 8px;
+    align-items: center;
+}
+
+.tip-percent button{
+    padding: 1rem;
+    margin: 0.5rem;
+    font-size: 20px;
+    background: var(--button-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+.tip-percent input{
+    padding: 0;
+    margin: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    background: var(--input-background-color);
+}
+
+.tip-percent input:placeholder-shown{
+    text-transform: capitalize;
+    font-family: var(--my-font);
+    text-align: right;
+    padding-right: 10px;
+}
+
+.tip-percent input{
+    min-width: 0;
+}
+
+input{
+    padding: 0.5rem;
+    margin: 8px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    background:var(--input-background-color) ;
+}
+
+label{
+    margin: 8px;
+}
+
+.display{
+    background: var(--button-color);
+    padding: 3rem;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.tip-amount, .each-person{
+    font-size: 18px;
+    color: white;
+}
+
+.display .tip-amount p,.display .each-person p{
+    font-size: 16px;
+    color: var(--input-background-color);
+    margin: 0;
+}
+
+.total-tip-display, .each-person-display{
+    font-size: 50px;
+    font-weight: bold;
+    color: hsl(172, 67%, 45%);
+}
+
+.display button{
+    grid-column: 1/ span 2;
+    border-radius: 5px;
+    background: hsl(172, 67%, 45%);
+    font-weight: bold;
+    border: none;
+    color: var(--button-color);
+    font-size: 24px;
+    padding: 1.5rem;
+    transition: all ease 0.3s;
+}
+
+input[type=text] {
+    font-family: var(--my-font);
+    text-align: right;
+    color: hsl(172, 67%, 45%);
+    font-weight: bold;
+}
+
+.tip-percent button:focus, .tip-percent button:hover {
+    background: hsl(172, 67%, 45%);
+}
+.display button:hover{
+    background: var(--button-color-hover);
+}
+
+@media screen and (min-width: 600px) {
+
+    .body{
+        padding: 5rem;
+    }
+
+    .main-component{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        width: 75%;
+        margin: 3rem auto;
+    }
+}
